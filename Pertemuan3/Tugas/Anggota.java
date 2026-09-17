@@ -29,7 +29,7 @@ public class Anggota {
         return jumlahPinjaman;
     }
 
-    public void pinjam(int nominal) { //validasi nominal 
+    public void pinjam(int nominal) {
         if (jumlahPinjaman + nominal > limitPinjaman) {
             System.out.println("Maaf, jumlah pinjaman melebihi limit.");
         } else {
@@ -39,6 +39,11 @@ public class Anggota {
 
     // Mengangsur pinjaman.
     public void angsur(int nominal) {
-        jumlahPinjaman -= nominal;
+        int minimalAngsuran = jumlahPinjaman / 10;
+        if (nominal < minimalAngsuran) {
+            System.out.println("Maaf Angsuran harus lebih dari 10% dari jumlah pinjaman");
+        } else {
+            jumlahPinjaman -= nominal;
+        }
     }
 }

@@ -1,16 +1,17 @@
 package PeminjamanBarang;
 
-public class Barang {
-    private String kodeBarang;
-    private String namaBarang;
+public class Barang { 
+    private String kodeBarang; //atribut private yg hanya bisa diakses memakai getter dan setter
+    private String namaBarang; 
     private int stok;
 
-    public Barang(String kodeBarang, String namaBarang, int stok) {
+    public Barang(String kodeBarang, String namaBarang, int stok) { //constructor untuk mengisi ketika object Barang dibuat 
         this.kodeBarang = kodeBarang;
         this.namaBarang = namaBarang;
         this.stok = stok;
     }
 
+    //method getter dan setter untuk barang
     public String getKodeBarang() {
         return kodeBarang;
     }
@@ -35,12 +36,12 @@ public class Barang {
         this.stok = stok;
     }
 
-    // Dipanggil pas barang dipinjam
+    // method untuk barang  dipinjam
     public void kurangiStok(int jumlah) {
         this.stok -= jumlah;
     }
 
-    // Dipanggil pas barang dikembalikan
+    // method untuk barang  dikembalikan
     public void tambahStok(int jumlah) {
         this.stok += jumlah;
     }

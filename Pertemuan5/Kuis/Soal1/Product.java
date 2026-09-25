@@ -1,4 +1,5 @@
 package Pertemuan5.Kuis.Soal1;
+
 import java.util.List;
 import java.util.ArrayList;
 
@@ -6,6 +7,7 @@ public class Product {
     private int productId;
     private float productPrice;
     private String productType;
+
     private List<Stock> stockList = new ArrayList<>();
 
     public Product(int productId, float productPrice, String productType) {
@@ -61,5 +63,9 @@ public class Product {
     public Product selectProduct(int productId) {
         System.out.println("Menampilkan detail produk id=" + productId);
         return this;
+    }
+
+    public String getInfo() {
+        return "Product{id=" + productId + ", harga=" + productPrice + ", tipe=" + productType + "}";
     }
 }

@@ -70,8 +70,7 @@ public class Customer {
         System.out.println("Customer '" + customerName + "' berhasil dihapus.");
     }
 
-    @Override
-    public String toString() {
+    public String getInfo() {
         return "Customer{id=" + customerId + ", nama=" + customerName
                 + ", alamat=" + address + ", telp=" + phone + "}";
     }

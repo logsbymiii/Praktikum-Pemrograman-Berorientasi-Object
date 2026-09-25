@@ -20,24 +20,28 @@ public class OrderProsessingSystem {
         Order o2 = new Order(1002, LocalDate.now(), p2.getProductPrice(), c2, p2);
         Order o3 = new Order(1003, LocalDate.now(), p2.getProductPrice(), c1, p2);
 
+        c1.tambahOrder(o1);
+        c2.tambahOrder(o2);
+        c1.tambahOrder(o3);
+
         o1.createOrder();
         o2.createOrder();
         o3.createOrder();
 
         System.out.println("\n--- Detail Order milik " + c1.getCustomerName() + " ---");
         for (Order o : c1.getOrderList()) {
-            System.out.println(o);
+            System.out.println(o.getInfo());
         }
 
         System.out.println("\n--- Detail Stock Product id=" + p1.getProductId() + " ---");
         for (Stock s : p1.getStockList()) {
-            System.out.println(s);
+            System.out.println(s.getInfo());
         }
 
         System.out.println("\n--- Ringkasan ---");
-        System.out.println(c1);
-        System.out.println(c2);
-        System.out.println(p1);
-        System.out.println(p2);
+        System.out.println(c1.getInfo());
+        System.out.println(c2.getInfo());
+        System.out.println(p1.getInfo());
+        System.out.println(p2.getInfo());
     }
 }

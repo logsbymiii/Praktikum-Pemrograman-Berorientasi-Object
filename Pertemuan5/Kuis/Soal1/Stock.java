@@ -1,4 +1,5 @@
 package Pertemuan5.Kuis.Soal1;
+
 public class Stock {
     private int quantity;
     private int shopNo;
@@ -42,5 +43,9 @@ public class Stock {
     public Stock selectStockItem(int productId) {
         System.out.println("Menampilkan detail stok untuk produk id=" + productId);
         return this;
+    }
+
+    public String getInfo() {
+        return "Stock{qty=" + quantity + ", shopNo=" + shopNo + "}";
     }
 }

@@ -16,7 +16,6 @@ public class Order {
         this.amount = amount;
         this.customer = customer;
         this.product = product;
-        customer.tambahOrder(this); 
     }
 
     public int getOrderId() {
@@ -69,8 +68,7 @@ public class Order {
         System.out.println("Order dengan id " + orderId + " berhasil diubah.");
     }
 
-    @Override
-    public String toString() {
+    public String getInfo() {
         return "Order{id=" + orderId + ", customer=" + customer.getCustomerName()
                 + ", product=" + product.getProductId() + ", amount=" + amount
                 + ", tanggal=" + orderDate + "}";

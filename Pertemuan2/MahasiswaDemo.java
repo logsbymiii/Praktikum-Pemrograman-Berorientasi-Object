@@ -1,3 +1,5 @@
+import Pertemuan7.Tugas.Overriding.Mahasiswa;
+
 public class MahasiswaDemo { 
     public static void main(String[] args) { 
         Mahasiswa m1 = new Mahasiswa();

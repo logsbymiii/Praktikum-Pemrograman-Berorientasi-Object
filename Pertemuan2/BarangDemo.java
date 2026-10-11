@@ -1,3 +1,5 @@
+import Pertemuan7.Tugas.TeoriPbo.Barang;
+
 public class BarangDemo {
     public static void main(String[] args) {
         Barang barang1 = new Barang();

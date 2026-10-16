@@ -1,3 +1,5 @@
+import Pertemuan8.Soal3.User;
+
 public class UserDemo {
     public static void main(String[] args) {
         User user1 = new User("anisa.nadya", "Annisa Nadya", "anisa.nadya@gmail.com" );
